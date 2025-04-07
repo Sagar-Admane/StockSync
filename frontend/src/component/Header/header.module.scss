@@ -1,0 +1,45 @@
+.header{
+    color: white;
+    background-color: rgb(21,21,21);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+
+    .search{
+        width: 50%;
+        
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            background-color: black;
+            padding: 12px;
+            border-radius: 12px;
+        
+        input{
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            color: white;
+        }
+
+        input::placeholder{
+            color: #fff;
+        }
+
+        input:focus{
+            outline: none;
+        }
+    }
+    }
+
+    .search, .profile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+    
+}

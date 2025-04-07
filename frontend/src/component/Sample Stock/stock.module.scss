@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+
+    div{
+        background-color: rgb(21,21,21);
+        padding: 18px;
+        border-radius: 20px;
+    }
+}
+
+
+.para{
+    font-size: 12px;
+}

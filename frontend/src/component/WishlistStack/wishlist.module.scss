@@ -1,0 +1,36 @@
+.container{
+    background-color: rgb(21, 21, 21);
+    padding: 28px;
+    border-radius: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    p{
+        text-align: center;
+    }
+
+    .list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        overflow-y: scroll;
+        max-height: 350px;
+        .listItem{
+            background-color: black;
+            border-radius: 12px;
+            padding: 8px 18px;
+            gap: 8px;
+            
+            p{
+                font-size: 20px;
+                // text-align: left;
+            }
+        }
+    }
+
+}
+
+.list::-webkit-scrollbar{
+    display: none;
+}

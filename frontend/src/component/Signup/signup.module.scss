@@ -1,0 +1,77 @@
+.container {
+    
+    padding: 15px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    border-left : 2px solid rgba(102, 102, 102, 0.25);
+  
+    .header {
+      color: #111;
+      text-align: center;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  
+    .form {
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+  
+        .email,
+        .password,
+        .name {
+          color: #666;
+          font-family: Poppins;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+  
+          input {
+            height: 44px;
+            width: 350px;
+            padding: 16px;
+            align-self: stretch;
+            border-radius: 12px;
+            border: 1px solid rgba(102, 102, 102, 0.35);
+          }
+        }
+  
+        .login {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button {
+            border-radius: 32px;
+            width: 90px;
+            height: 40px;
+  
+            color: #fff;
+            border: none;
+            text-align: center;
+            font-family: Poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            background: #111;
+            opacity: 0.25;
+          }
+        }
+      }
+    }
+  }
+  
+  .para{
+      margin-top: 12px;
+      text-align: center;
+      color: #666;
+      span{
+          color: #111;
+          cursor: pointer;
+      }
+  }

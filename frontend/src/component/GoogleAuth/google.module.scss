@@ -1,0 +1,75 @@
+.container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 47px 64px;
+
+  .head {
+    color: #111;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .google{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        width: 354px;
+        height: 50px;
+        font-size: 18px;
+        background-color: white;
+        border: 1px solid rgba(0, 0, 0, 0.442);
+        border-radius: 40px;
+        cursor: pointer;
+    }
+  }
+
+  .footer {
+    color: #666;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    .terms {
+      color: #333;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+
+    .policy {
+      color: #111;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: none;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
+    }
+  }
+}

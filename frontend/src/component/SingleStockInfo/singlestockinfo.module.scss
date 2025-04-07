@@ -1,0 +1,121 @@
+.container {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    .left {
+      background-color: rgb(21, 21, 21);
+      color: white;
+    }
+    .right {
+      color: #fff;
+      width: 100%;
+
+      .content{
+        padding: 40px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .name{
+          display: flex;
+          justify-content: space-between;
+
+          .symbol{
+            p{
+              font-size: 24px;
+              font-weight: 500;
+            }
+          }
+
+          .button{
+            button{
+              border-radius: 16px;
+              div{
+                 padding: 8px 12px 8px 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+
+                p{
+                  font-size: larger;
+                  font-weight: 500;
+                }
+              }
+              
+            }
+          }
+
+        }
+
+        .info{
+          background-color: rgb(21, 21, 21);
+          border-radius: 18px;
+          padding: 12px 20px;
+          display: flex;
+          justify-content: space-between;
+
+          div{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            p{
+              font-size: 21px;
+            }
+
+            .infoHead{
+              font-size: 16px;
+              color: rgb(109, 109, 109);
+            }
+
+          }
+
+        }
+
+        .chart{
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+      }
+
+    }
+
+
+}  
+
+
+.container3{
+  background-color: rgb(21, 21, 21);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px;
+  border-radius: 20px;
+  flex: 6;
+
+  .btn{
+    width: fit-content;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 12px;
+    color: #fff;
+    background-color: black;
+    font-size: 18px;
+    border: 1px double white;
+  }
+
+  p{
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .dis{
+    color: red;
+    font-weight: 200;
+    font-size: 12px;
+  }
+
+}
