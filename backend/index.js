@@ -21,7 +21,6 @@ const PORT = process.env.PORT;
 
 app.get("/", (req, res)=>{
     res.send("API is running");
-    fetchData();
 })
 
 app.use("/user", userRoute);
@@ -67,20 +66,24 @@ const io = new Server(server, {
 })
 
 io.on("connection", (socket) => {
-    console.log("New client connected ... ");
-    socket.on("subscribeStock", async (symbol) => {
-        console.log(`Client subscribed to stock ${symbol}`);
-        const interval = setInterval( async ()=>{
-            const stockInfo = await fetchData(symbol);
-            if(stockInfo){
-                socket.emit("stockUpdate", stockInfo);
-                console.log(stockInfo);
-            }
-        }, 30000)
+    console.log("New client connected");
 
-        socket.on("disconnect", ()=>{
-            clearInterval(interval);
-            console.log("Client Disconneted ... ");
-        })
-    })
-})
+    let activeInterval = null;
+
+    socket.on("subscribeStock", async (symbol) => {
+        console.log(`Subscribed to: ${symbol}`);
+        if (activeInterval) clearInterval(activeInterval);
+
+        activeInterval = setInterval(async () => {
+            const stockInfo = await fetchData(symbol);
+            if (stockInfo) {
+                socket.emit("stockUpdate", stockInfo);
+            }
+        }, 30000);
+    });
+
+    socket.on("disconnect", () => {
+        if (activeInterval) clearInterval(activeInterval);
+        console.log("Client disconnected");
+    });
+});

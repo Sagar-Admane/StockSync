@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import style from "./chart2.module.scss";
 import {
   ResponsiveContainer,
@@ -8,12 +8,16 @@ import {
   YAxis,
   Tooltip,
 } from "recharts";
+import context from '../../context/context';
 
-function Chart2({ price }) {
-  // Transform array of numbers into array of objects for Recharts
-  const formattedData = price.map((value, index) => ({
+function Chart2({ symbol }) {
+  
+  
+  const {forPredict, setForPredit} = useContext(context);
+  
+  const formattedData = forPredict?.map((value, index) => ({
     price: value,
-    name: `Point ${index + 1}`, // Optional: you can replace this with timestamps or labels
+    name: `Point ${index + 1}`, 
   }));
 
   return (
